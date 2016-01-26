@@ -8,24 +8,38 @@ h1 {
   background: linear-gradient(#f6e441, #fef286);
   border: 1px solid #ccc;
   font-weight: bolder;
-  font-size: 24px;
-  padding: 20px;
+  font-size: 2em;
+  padding: 1em;
 }
 article {
+
+}
+ul.message-history {
   overflow: scroll;
-  width: 100%;
   position: fixed;
   bottom: 55px;
-  top: 120px;
-  left: 20px;
+  top: 10em;
+  left: 225px;
+  right: 0px;
 }
-ul.message-history {}
-li {
-  color: #999;
-  padding-right: 10px;
+
+.message-timestamp {
+  position: absolute;
+  right: 25px;
+  font-size: 1em;
+  color: #ccc;
+}
+
+li .username {
+  color: #000;
+  font-weight: bold;
+}
+li .text-body {
+  color: #555;
+  padding-left: 20px;
 }
 .login {
-  padding: 10px 20px;
+  padding: .5em 1em;
   background: #eee;
   margin-bottom: 10px;
 }

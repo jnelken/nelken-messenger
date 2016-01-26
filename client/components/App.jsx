@@ -6,6 +6,7 @@ App = React.createClass({
     var text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
 
     Messages.insert({
+      username: Meteor.user().username,
       text: text,
       createdAt: new Date()
     });
@@ -19,12 +20,13 @@ App = React.createClass({
 
         <header>
           <h1>Nelken Messenger</h1>
-            <AccountsUIWrapper />
+          <AccountsUIWrapper />
         </header>
 
-        <article>
-          <MessageHistory />
-        </article>
+        <div className="flex-main">
+            <Sidebar />
+            <MessageHistory />
+        </div>
 
         <footer>
           <form className="new-message" onSubmit={this.handleSubmit} >

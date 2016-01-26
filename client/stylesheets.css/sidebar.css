@@ -1,0 +1,13 @@
+.sidebar {
+  min-width: 200px;
+  position: fixed;
+  bottom: 55px;
+  top: 10em; 
+  left: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.flex-main {
+  display: flex;
+  justify-content: flex-start;
+}

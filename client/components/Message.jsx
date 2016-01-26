@@ -3,9 +3,23 @@ Message = React.createClass({
     message: React.PropTypes.object.isRequired
   },
 
+  timestamp() {
+    return moment(this.props.message.createdAt).format('MMM Do, h:mm a');
+  },
+
   render() {
     return (
-      <li>{this.props.message.text}</li>
+      <li>
+        <span className="username">
+          {Meteor.user().username}
+        </span>
+
+        <span className="message-timestamp">
+          {this.timestamp()}
+        </span>
+
+        <p className="text-body">{this.props.message.text}</p>
+      </li>
     );
   }
 });
