@@ -1,0 +1,52 @@
+body {
+  font-family: "Futura";
+}
+header {
+  width: 100%;
+}
+h1 {
+  background: linear-gradient(#f6e441, #fef286);
+  border: 1px solid #ccc;
+  font-weight: bolder;
+  font-size: 24px;
+  padding: 20px;
+}
+article {
+  overflow: scroll;
+  width: 100%;
+  position: fixed;
+  bottom: 55px;
+  top: 120px;
+  left: 20px;
+}
+ul.message-history {}
+li {
+  color: #999;
+  padding-right: 10px;
+}
+.login {
+  padding: 10px 20px;
+  background: #eee;
+  margin-bottom: 10px;
+}
+footer {
+  background: linear-gradient(#f6e441, #fef286);
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.new-message {
+  margin: 10px 10px;
+  width: 50%;
+}
+.new-message input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: relative;
+  right: 20px;
+}
