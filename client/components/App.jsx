@@ -22,6 +22,7 @@ App = React.createClass({
 
         <div className="flex-main">
             <Sidebar userRooms={this.userRooms}/>
+            <NewChat currentUser={this.data.currentUser} />
             <MessageHistory room={this.userRoom()}/>
         </div>
 
