@@ -2,7 +2,6 @@ Sidebar = React.createClass({
   mixins: [ReactMeteorData],
 
   getMeteorData() {
-    var currentRoomId = new Meteor.Collection.ObjectID();
     return {
       rooms: Rooms.find({}).fetch()
     };

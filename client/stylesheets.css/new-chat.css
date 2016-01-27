@@ -1,12 +1,16 @@
 .new-chat {
-  background: #000;
+  background: #FCD598;
   z-index: 1000;
   height: 2em;
-  width: 2em;
+  width: 10em;
 
-  margin: 1em 3em 1em 0;
   position: fixed;
   left: 1em;
-  bottom: .5em;
+  bottom: .7em;
   align-items: center;
+  border-radius: 5px;
+}
+
+.new-chat:focus {
+  height: 4em;
 }
