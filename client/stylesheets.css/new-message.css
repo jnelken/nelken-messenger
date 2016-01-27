@@ -1,0 +1,15 @@
+.new-message {
+  margin: 10px 10px;
+  position: fixed;
+  left: 14em;
+  right: 1em;
+}
+.new-message input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: relative;
+  right: 20px;
+}

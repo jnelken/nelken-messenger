@@ -1,17 +1,11 @@
 App = React.createClass({
 
-  handleSubmit(e) {
-    e.preventDefault();
+  mixins: [ReactMeteorData],
 
-    var text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
-
-    Messages.insert({
-      username: Meteor.user().username,
-      text: text,
-      createdAt: new Date()
-    });
-
-    ReactDOM.findDOMNode(this.refs.textInput).value = "";
+  getMeteorData() {
+    return {
+      currentUser: Meteor.user()
+    };
   },
 
   render() {
@@ -20,24 +14,27 @@ App = React.createClass({
 
         <header>
           <h1>Nelken Messenger</h1>
-          <AccountsUIWrapper />
         </header>
 
         <div className="flex-main">
-            <Sidebar />
-            <MessageHistory />
+            <Sidebar userRooms={this.userRooms}/>
+            <MessageHistory room={this.userRoom()}/>
         </div>
 
         <footer>
-          <form className="new-message" onSubmit={this.handleSubmit} >
-            <input
-              type="text"
-              ref="textInput"
-              placeholder="Send your message" />
-          </form>
+          <NewMessage currentUser={this.data.currentUser} />
         </footer>
 
       </div>
     );
   },
+
+  userRoom() {
+    return Rooms.find({_id : Session.get("currentRoomId") });
+  },
+
+  userRooms() {
+    // return Rooms.find({_id : Meteor.user().rooms});
+  }
+
 });

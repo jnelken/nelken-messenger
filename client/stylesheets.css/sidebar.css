@@ -1,13 +1,45 @@
-.sidebar {
-  min-width: 200px;
-  position: fixed;
-  bottom: 55px;
-  top: 10em; 
-  left: 20px;
-  border-right: 1px solid #ccc;
-}
-
 .flex-main {
   display: flex;
   justify-content: flex-start;
+}
+.sidebar {
+  background: #eee;
+  z-index: -1;
+}
+.room-index {
+  border-right: 1px solid #ccc;
+  min-width: 10em;
+  padding-top: 1em;
+  background: inherit;
+  padding-left: 2em;
+
+  position: fixed;
+  bottom: 55px;
+  top: 9.5em;
+}
+
+.room-index li p {
+  margin-right: 20px;
+  border-radius: 5px;
+  padding: .1em;
+}
+.room-item {
+  cursor: pointer;
+  margin: 5px 0;
+  font-style: italic;
+}
+
+.room-item::before {
+  content: "# "
+}
+
+.current-room {
+  margin: 5px 0;
+  font-style: italic;
+  color: #fff;
+  background: #6aa5ff;
+}
+
+.current-room::before {
+  content: "➜ "
 }

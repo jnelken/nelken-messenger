@@ -1,0 +1,28 @@
+ul.message-history {
+  overflow: scroll;
+  position: fixed;
+  bottom: 55px;
+  top: 9.5em;
+  left: 14em;
+  right: 0px;
+}
+
+.top-msg-spacer, .bottom-msg-spacer {
+  height: 1em;
+}
+
+.message-timestamp {
+  position: absolute;
+  right: 25px;
+  font-size: 1em;
+  color: #ccc;
+}
+
+li .username {
+  color: #000;
+  font-weight: bold;
+}
+li .text-body {
+  color: #555;
+  padding-left: 20px;
+}
