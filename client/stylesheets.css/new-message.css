@@ -1,15 +1,16 @@
 .new-message {
-  margin: 10px 10px;
+  margin: 1em 3em 1em 0;
   position: fixed;
   left: 14em;
   right: 1em;
+  align-items: center;
 }
 .new-message input {
   width: 100%;
-  background: #fff;
-  border: 1px solid black;
+  background: #FEF5E5;
+  /*border: 1px solid black;*/
   border-radius: 5px;
-  padding: 5px 10px;
-  position: relative;
-  right: 20px;
+  padding: .3em 1em;
+  /*position: relative;
+  right: 1.8em;*/
 }

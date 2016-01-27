@@ -4,16 +4,20 @@ App = React.createClass({
 
   getMeteorData() {
     return {
-      currentUser: Meteor.user()
+      currentUser: Meteor.user(),
+      currentRoom : Rooms.findOne(Session.get("currentRoomId"))
     };
   },
 
   render() {
+    var roomTitle = this.data.currentRoom && this.data.currentRoom.title;
+
     return (
       <div className="container">
 
         <header>
-          <h1>Nelken Messenger</h1>
+          <img src="images/hive_logo.png" />
+          <h2 className="current-room-title"># {roomTitle}</h2>
         </header>
 
         <div className="flex-main">

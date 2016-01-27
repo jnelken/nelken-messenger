@@ -2,6 +2,7 @@ Sidebar = React.createClass({
   mixins: [ReactMeteorData],
 
   getMeteorData() {
+    var currentRoomId = new Meteor.Collection.ObjectID();
     return {
       rooms: Rooms.find({}).fetch()
     };
@@ -9,12 +10,8 @@ Sidebar = React.createClass({
 
   renderRooms() {
     return this.data.rooms.map((room) => {
-      var roomStatus;
-      if (Session.get("currentRoomId") === room._id) {
-        roomStatus =  "current-room";
-      } else {
-        roomStatus = "room-item";
-      }
+      var roomStatus = Session.get("currentRoomId") === room._id ?
+        "current-room" : "room-item";
 
       return (
         <RoomItem
@@ -27,19 +24,13 @@ Sidebar = React.createClass({
   },
 
   render() {
-    // <p className="current-room-title">{this.userRoom().title}</p>
     return (
-      <div className="sidebar" onClick={this.refreshRooms}>
+      <div className="sidebar">
         <AccountsUIWrapper />
         <ul className="room-index">
           {this.renderRooms()}
         </ul>
       </div>
     );
-  },
-
-  refreshRooms() {
-    // this is a workaround to using flux stores
-    this.forceUpdate();
   }
 });

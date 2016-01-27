@@ -1,39 +1,46 @@
 body {
-  font-family: "Futura";
+  font-family: 'Open Sans', Helvetica, sans-serif;
 }
 header {
   width: 100%;
+  background: linear-gradient(#FCD598, #FCD598);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7em;
+}
+
+header img {
+  width: 5em;
+  margin-left: 4em;
 }
 .current-room-title {
-  height: 1em;
-  width: 100%;
-  text-align: right;
+  background: #FEF5E5;
+  color: #FCD598;
+  margin-right: 1em;
+  border-radius: 30px;
+  padding: .5em;
+  font-weight: lighter;
+  font-size: 1.5em;
 }
 h1 {
-  background: linear-gradient(#f6e441, #fef286);
-  border: 1px solid #ccc;
-  border: 1px 0;
   font-weight: bolder;
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 1em;
   height: 1.5em;
+  width: 200px;
 }
-.login {
-  padding: .5em 2em;
-  background: #eee;
-  border-bottom: 1px solid #ccc;
+.flex-main {
   position: fixed;
-  right: 0px;
-  left: 0px;
+  bottom: 0px;
+  top: 7em;
 }
 
 footer {
-  background: linear-gradient(#f6e441, #fef286);
-  border-top: 1px solid #ccc;
+  background: #FCD598;
   position: fixed;
   bottom: 0px;
-  display: flex;
-  justify-content: flex-end;
   width: 100%;
   min-height: 55px;
+  z-index: -1;
 }

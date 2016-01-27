@@ -1,6 +1,5 @@
 NewMessage = React.createClass({
-  // This currently isn't reactive without a Flux store, refresh required
-
+  
   render() {
     return this.props.currentUser ?
       <form className="new-message" onSubmit={this.handleSubmit} >

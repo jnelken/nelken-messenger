@@ -1,16 +1,10 @@
 Meteor.startup(function () {
-  if (!Rooms.findOne().title) {
+  if (!Rooms.findOne()) {
 
     var defaultRooms = [
       {
-        title: 'general',
+        title: 'global',
       },
-      {
-        title: 'random',
-      },
-      {
-        title: 'developer',
-      }
     ];
 
     _.each(defaultRooms, function(room) {

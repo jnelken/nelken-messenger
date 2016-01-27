@@ -1,4 +1,5 @@
 RoomItem = React.createClass({
+  
   propTypes: {
     room: React.PropTypes.object.isRequired,
     roomStatus: React.PropTypes.string.isRequired

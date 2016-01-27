@@ -3,25 +3,21 @@
   justify-content: flex-start;
 }
 .sidebar {
-  background: #eee;
-  z-index: -1;
+  background: #FEF5E5;
+  width: 12em;
+  height: 100%;
 }
 .room-index {
-  border-right: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-style: dotted;
   min-width: 10em;
-  padding-top: 1em;
-  background: inherit;
-  padding-left: 2em;
-
-  position: fixed;
-  bottom: 55px;
-  top: 9.5em;
+  margin: 1em;
 }
 
 .room-index li p {
-  margin-right: 20px;
   border-radius: 5px;
-  padding: .1em;
+  padding: .2em;
+  font-weight: bold;
 }
 .room-item {
   cursor: pointer;
@@ -36,10 +32,21 @@
 .current-room {
   margin: 5px 0;
   font-style: italic;
-  color: #fff;
-  background: #6aa5ff;
+  /*color: #fff;
+  background: #6aa5ff;*/
+  background: #FCD598;
+  color: #FEF5E5;
 }
 
 .current-room::before {
   content: "➜ "
+}
+
+.login {
+  margin: 1em 1em 0 1em;
+  /*padding: .2em 1em;*/
+  /*background: #FCD598;*/
+  /*color: #FEF5E5;*/
+  font-size: 1.2em;
+  font-weight: bold;
 }
