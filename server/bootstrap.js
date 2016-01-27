@@ -3,6 +3,8 @@ Meteor.startup(function () {
     var defaultRooms = [
       {
         title: 'global',
+        roomUsers : [],
+        createdAt : new Date()
       },
     ];
     _.each(defaultRooms, function(room) {

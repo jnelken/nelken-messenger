@@ -1,7 +1,7 @@
 NewMessage = React.createClass({
-  
+
   render() {
-    return this.props.currentUser ?
+    return Meteor.user() ?
       <form className="new-message" onSubmit={this.handleSubmit} >
         <input
           type="text"

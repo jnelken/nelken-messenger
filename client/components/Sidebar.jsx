@@ -3,7 +3,7 @@ Sidebar = React.createClass({
 
   getMeteorData() {
     return {
-      rooms: Rooms.find({}).fetch()
+      rooms: Rooms.find().fetch()
     };
   },
 

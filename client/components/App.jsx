@@ -21,13 +21,13 @@ App = React.createClass({
         </header>
 
         <div className="flex-main">
-            <Sidebar userRooms={this.userRooms}/>
-            <NewChat currentUser={this.data.currentUser} />
+            <Sidebar />
+            <NewChat />
             <MessageHistory room={this.userRoom()}/>
         </div>
 
         <footer>
-          <NewMessage currentUser={this.data.currentUser} />
+          <NewMessage />
         </footer>
 
       </div>
@@ -37,9 +37,5 @@ App = React.createClass({
   userRoom() {
     return Rooms.find({_id : Session.get("currentRoomId") });
   },
-
-  userRooms() {
-    // return Rooms.find({_id : Meteor.user().rooms});
-  }
 
 });

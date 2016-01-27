@@ -9,8 +9,35 @@
   bottom: .7em;
   align-items: center;
   border-radius: 5px;
+
+  transition: height 200ms;
+  overflow: auto;
 }
 
-.new-chat:focus {
-  height: 4em;
+.new-chat:hover {
+  height: 10em;
+}
+
+.new-chat:nth-child(2+1) {
+  background: #fff;
+}
+
+.new-chat:hover .user-item {
+  display: list-item;
+}
+
+.user-item {
+  display: none;
+  margin: .5em;
+  cursor: pointer;
+}
+
+.chat-start-text {
+  color: #FEF5E5;
+  text-shadow: 1px 1px 1px black;
+  font-weight: bold;
+  text-align: center;
+  margin: .5em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #000;
 }
