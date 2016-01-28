@@ -7,7 +7,7 @@ NewMessage = React.createClass({
           type="text"
           ref="textInput"
           placeholder="Send your message" />
-      </form> : <p className="new-message">Please sign in to chat!</p>;
+      </form> : <p className="new-message"></p>;
   },
 
   handleSubmit(e) {
