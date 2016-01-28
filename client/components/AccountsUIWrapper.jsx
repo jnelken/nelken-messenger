@@ -7,10 +7,12 @@ AccountsUIWrapper = React.createClass({
   componentWillUnmount() {
     Blaze.remove(this.view);
   },
-  
+
   render() {
     return (
-      <div className="login" ref="container"></div>
+      <div className="login-container">
+        <div className="login" ref="container"></div>
+      </div>
     );
   }
 });

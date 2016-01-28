@@ -9,6 +9,18 @@
   padding-bottom: 55px;
   overflow: scroll;
 }
+
+.login {
+  font-size: 1.2em;
+  font-weight: bold;
+  position: absolute;
+}
+
+.login-container {
+  margin: 1em 1em 0 1em;
+  height: 1.5em;
+}
+
 .room-index {
   border-top: 1px solid #ccc;
   border-style: dotted;
@@ -40,10 +52,4 @@
 
 .current-room::before {
   content: "➜ "
-}
-
-.login {
-  margin: 1em 1em 0 1em;
-  font-size: 1.2em;
-  font-weight: bold;
 }

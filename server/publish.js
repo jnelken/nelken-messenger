@@ -29,6 +29,7 @@ var addUsersToGlobalRoom = function(users) {
   var userIds = users.map((user) => {
     return { "userId" : user._id };
   });
+  
   Rooms.update(
     { title : "global" },
     {
