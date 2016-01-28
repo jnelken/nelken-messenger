@@ -21,6 +21,7 @@ UserItem = React.createClass({
      ],
       createdAt: new Date()
     });
+    
     Session.set("currentRoomId", newRoomId);
     Session.set("currentRoomTitle", this.props.user.username);
   }

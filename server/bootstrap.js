@@ -2,6 +2,7 @@ Meteor.startup(function () {
   if (!Rooms.findOne()) {
     var defaultRooms = [
       {
+        _id: 0,
         title: 'global',
         roomUsers : [],
         createdAt : new Date()

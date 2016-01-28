@@ -2,7 +2,7 @@ MessageHistory = React.createClass({
   mixins: [ReactMeteorData],
 
   getMeteorData() {
-    var currentRoomId = Session.get("currentRoomId") || "";
+    var currentRoomId = Session.get("currentRoomId") || "0";
     return {
       messages: Messages.find({roomId : currentRoomId }).fetch()
     };
