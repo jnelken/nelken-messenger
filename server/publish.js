@@ -10,7 +10,7 @@ Messages.allow({
 
 Meteor.publish('rooms', function () {
   var currentUserId = this.userId;
-  return Rooms.find({ roomUsers : {userId: currentUserId} });
+  return Rooms.find({ roomUsers : {userId: currentUserId}});
 });
 
 Rooms.allow({

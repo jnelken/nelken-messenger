@@ -3,7 +3,7 @@ App = React.createClass({
   mixins: [ReactMeteorData],
 
   getMeteorData() {
-    //does not pass 'currentUser' down as a child to components,
+    // does not pass 'currentUser' down as a child to components,
     // can be refactored
     return {
       currentUser: Meteor.user(),

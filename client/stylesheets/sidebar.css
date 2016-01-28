@@ -5,9 +5,9 @@
 .sidebar {
   background: #FEF5E5;
   width: 12em;
-  /*height: 100%;*/
-  overflow: scroll;
+
   padding-bottom: 55px;
+  overflow: scroll;
 }
 .room-index {
   border-top: 1px solid #ccc;

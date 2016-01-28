@@ -10,7 +10,7 @@ UserItem = React.createClass({
   createRoom() {
     // creates titles that aren't strings, meaning incinsistent data
     // types across room titles. Should be refactored.
-    Rooms.insert({
+    var newRoomId = Rooms.insert({
       title: [
         { "username" : this.props.user.username},
         { "username" : Meteor.user().username}
@@ -21,5 +21,7 @@ UserItem = React.createClass({
      ],
       createdAt: new Date()
     });
+    Session.set("currentRoomId", newRoomId);
+    Session.set("currentRoomTitle", this.props.user.username);
   }
 });
