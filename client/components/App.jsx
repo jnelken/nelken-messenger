@@ -3,39 +3,34 @@ App = React.createClass({
   mixins: [ReactMeteorData],
 
   getMeteorData() {
+    //does not pass 'currentUser' down as a child to components,
+    // can be refactored
     return {
       currentUser: Meteor.user(),
-      currentRoom : Rooms.findOne(Session.get("currentRoomId"))
+      roomTitle: Session.get("currentRoomTitle")
     };
   },
 
   render() {
-    var roomTitle = this.data.currentRoom && this.data.currentRoom.title;
-
     return (
       <div className="container">
 
         <header>
           <img src="images/hive_logo.png" />
-          <h2 className="current-room-title"># {roomTitle}</h2>
+          <h2 className="current-room-title"># {this.data.roomTitle}</h2>
         </header>
 
         <div className="flex-main">
             <Sidebar />
-            <NewChat />
-            <MessageHistory room={this.userRoom()}/>
+            <MessageHistory />
         </div>
 
         <footer>
+          <NewChat />
           <NewMessage />
         </footer>
 
       </div>
     );
-  },
-
-  userRoom() {
-    return Rooms.find({_id : Session.get("currentRoomId") });
-  },
-
+  }
 });

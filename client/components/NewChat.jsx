@@ -38,7 +38,7 @@ NewChat = React.createClass({
   render() {
     return (
       <ul className="new-chat">
-        <p className="chat-start-text">New chat!</p>
+        <p className="chat-start-text">New chat</p>
         {this.renderUsers()}
       </ul>
     );

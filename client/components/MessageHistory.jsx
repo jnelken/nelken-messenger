@@ -25,10 +25,7 @@ MessageHistory = React.createClass({
   },
 
   scrollDown() {
-  //   let lastMsg = Messages.find({}).sort({$natural: -1}).limit(1).fetch();
-  //   console.log(lastMsg);
-  //   let msgId = '#msg-' + lastMsg._id;
-  //   console.log(msgId);
-  //   $().scrollView();
+    // couldn't figure out in time how to scroll msg window with every
+    // new message
   }
 });

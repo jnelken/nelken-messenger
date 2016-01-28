@@ -1,6 +1,6 @@
 .new-chat {
-  background: #FCD598;
-  z-index: 1000;
+  color: #FEF5E5;
+  background: linear-gradient(#999999, #555555);
   height: 2em;
   width: 10em;
 
@@ -18,23 +18,17 @@
   height: 10em;
 }
 
-.new-chat:nth-child(2+1) {
-  background: #fff;
-}
-
 .new-chat:hover .user-item {
   display: list-item;
 }
 
 .user-item {
   display: none;
-  margin: .5em;
+  padding: .5em;
   cursor: pointer;
 }
 
 .chat-start-text {
-  color: #FEF5E5;
-  text-shadow: 1px 1px 1px black;
   font-weight: bold;
   text-align: center;
   margin: .5em;

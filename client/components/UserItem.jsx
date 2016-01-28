@@ -8,6 +8,8 @@ UserItem = React.createClass({
   },
 
   createRoom() {
+    // creates titles that aren't strings, meaning incinsistent data
+    // types across room titles. Should be refactored.
     Rooms.insert({
       title: [
         { "username" : this.props.user.username},

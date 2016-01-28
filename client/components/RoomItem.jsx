@@ -16,17 +16,19 @@ RoomItem = React.createClass({
   },
 
   roomTitle() {
+    // should be refactored, see 'UserItem : 11'
     if (typeof this.props.room.title === "string") {
       return this.props.room.title;
     } else {
-      console.log(this.props.room.title[0].username);
-      console.log(this.props.room.title[1].username);
+      var roomUser1 = this.props.room.title[0].username;
+      var roomUser2 = this.props.room.title[1].username;
+      var currentUser = Meteor.user().username;
 
-      if (this.props.room.title[0].username !== Meteor.user().username) {
-        return this.props.room.title[0].username;
+      if (roomUser1 !== currentUser) {
+        return roomUser1;
       }
-      if (this.props.room.title[1].username !== Meteor.user().username) {
-        return this.props.room.title[1].username;
+      if (roomUser2 !== currentUser) {
+        return roomUser2;
       }
     }
   },
@@ -37,5 +39,6 @@ RoomItem = React.createClass({
 
   changeRoom() {
     Session.set("currentRoomId", this.props.room._id);
+    Session.set("currentRoomTitle", this.roomTitle());
   }
 });

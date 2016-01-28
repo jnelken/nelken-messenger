@@ -5,7 +5,9 @@
 .sidebar {
   background: #FEF5E5;
   width: 12em;
-  height: 100%;
+  /*height: 100%;*/
+  overflow: scroll;
+  padding-bottom: 55px;
 }
 .room-index {
   border-top: 1px solid #ccc;
@@ -32,9 +34,8 @@
 .current-room {
   margin: 5px 0;
   font-style: italic;
-  /*background: #6aa5ff;*/
-  background: #FCD598;
-  color: #FEF5E5;
+  background: #555555;
+  color: #fff;
 }
 
 .current-room::before {
@@ -43,9 +44,6 @@
 
 .login {
   margin: 1em 1em 0 1em;
-  /*padding: .2em 1em;*/
-  /*background: #FCD598;*/
-  /*color: #FEF5E5;*/
   font-size: 1.2em;
   font-weight: bold;
 }

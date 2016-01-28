@@ -37,10 +37,11 @@ h1 {
 }
 
 footer {
-  background: #FCD598;
+  /*background: #FCD598;*/
+    background: linear-gradient(#999999, #555555);
   position: fixed;
   bottom: 0px;
   width: 100%;
   min-height: 55px;
-  z-index: -1;
+  /*z-index: -1;*/
 }
