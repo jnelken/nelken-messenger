@@ -1,6 +1,11 @@
 MessageHistory = React.createClass({
   mixins: [ReactMeteorData],
 
+  componentDidUpdate: function() {
+    var node = this.getDOMNode();
+    node.scrollTop = node.scrollHeight;
+  },
+
   getMeteorData() {
     var currentRoomId = Session.get("currentRoomId");
     return {
@@ -16,16 +21,11 @@ MessageHistory = React.createClass({
 
   render() {
     return(
-      <ul className="message-history" onChange={this.scrollDown}>
+      <ul className="message-history">
         <li className="top-msg-spacer"></li>
         {this.renderMessages()}
-        <li className="bottom-msg-spacer"></li>
+        <li ref="msgScroll" id="msg-scroll" className="bottom-msg-spacer"></li>
       </ul>
     );
-  },
-
-  scrollDown() {
-    // couldn't figure out in time how to scroll msg window with every
-    // new message
   }
 });
