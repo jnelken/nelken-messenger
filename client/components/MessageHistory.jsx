@@ -2,7 +2,7 @@ MessageHistory = React.createClass({
   mixins: [ReactMeteorData],
 
   componentDidUpdate: function() {
-    var node = this.getDOMNode();
+    var node = ReactDOM.findDOMNode(this.refs.msgScroll);
     node.scrollTop = node.scrollHeight;
   },
 
@@ -21,10 +21,10 @@ MessageHistory = React.createClass({
 
   render() {
     return(
-      <ul className="message-history">
+      <ul ref="msgScroll" className="message-history">
         <li className="top-msg-spacer"></li>
         {this.renderMessages()}
-        <li ref="msgScroll" id="msg-scroll" className="bottom-msg-spacer"></li>
+        <li id="msg-scroll" className="bottom-msg-spacer"></li>
       </ul>
     );
   }
