@@ -1,17 +1,17 @@
 .new-chat {
   color: #FEF5E5;
   background: linear-gradient(#999999, #000000);
+  border-radius: 5px;
   height: 2em;
   width: 10em;
+  margin: auto;
+  overflow: auto;
 
   position: fixed;
   left: 1em;
-  bottom: .7em;
-  align-items: center;
-  border-radius: 5px;
+  bottom: 1em;
 
   transition: height 200ms;
-  overflow: auto;
 }
 
 .new-chat:hover {

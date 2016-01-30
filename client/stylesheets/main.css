@@ -41,5 +41,6 @@ footer {
   position: fixed;
   bottom: 0px;
   width: 100%;
-  min-height: 55px;
+  height: 4em;
+  font-size: 1em;
 }
