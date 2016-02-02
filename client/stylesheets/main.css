@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans', Helvetica, sans-serif;
-  font-size: .7em;
+  font-size: 1em;
 }
 header {
   width: 100%;
@@ -44,6 +44,9 @@ footer {
   font-size: 1em;
 }
 @media screen and (max-width: 580px) {
+  body {
+      font-size: .7em;
+  }
   footer {
     height: 4em;
   }
