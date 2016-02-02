@@ -11,7 +11,7 @@
   left: 1em;
   bottom: 1em;
 
-  transition: height 200ms;
+  transition: height 400ms;
 }
 
 .new-chat:hover {
