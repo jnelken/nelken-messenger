@@ -11,3 +11,8 @@
   border-radius: 5px;
   padding: .3em 1em;
 }
+@media screen and (max-width: 580px) {
+  .new-message {
+      left: 27vw;
+  }
+}

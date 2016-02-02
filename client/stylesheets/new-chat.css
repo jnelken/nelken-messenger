@@ -2,7 +2,7 @@
   color: #FEF5E5;
   background: linear-gradient(#999999, #000000);
   border-radius: 5px;
-  height: 2em;
+  height: 2.1em;
   width: 10em;
   margin: auto;
   overflow: auto;
@@ -15,10 +15,10 @@
 }
 
 .new-chat:hover {
-  height: 10em;
+  height: 50%;
 }
 
-.new-chat:hover .user-item {
+ .user-item {
   display: list-item;
 }
 
@@ -32,6 +32,13 @@
   font-weight: bold;
   text-align: center;
   margin: .5em;
+}
+.new-chat:hover .chat-start-text {
   padding-bottom: .5em;
   border-bottom: 1px solid #000;
+}
+@media screen and (max-width: 580px) {
+  .new-chat {
+      width: 20vw;
+  }
 }
