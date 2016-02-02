@@ -52,3 +52,12 @@
 .current-room::before {
   content: "➜ "
 }
+
+@media screen and (max-width: 580px) {
+  .sidebar {
+      width: 25vw;
+  }
+  .room-index {
+      min-width: 6em;
+  }
+}

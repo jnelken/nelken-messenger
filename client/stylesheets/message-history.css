@@ -27,3 +27,8 @@ li .text-body {
   color: #555;
   padding: .5em 3em 1em 1em;
 }
+@media screen and (max-width: 580px) {
+  .message-history {
+      left: 22.5vw;
+  }
+}
