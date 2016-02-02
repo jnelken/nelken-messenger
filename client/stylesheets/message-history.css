@@ -1,7 +1,7 @@
 .message-history {
   overflow: scroll;
   position: fixed;
-  bottom: 55px;
+  bottom: 4em;
   top: 7em;
   left: 12em;
   right: 0;
