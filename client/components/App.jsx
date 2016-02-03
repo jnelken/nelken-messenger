@@ -16,7 +16,7 @@ App = React.createClass({
       <div className="container">
 
         <header>
-          <img src="images/hive_logo.png" />
+          <img src="images/nelken_logo.png" />
           <h2 className="current-room-title"># {this.data.roomTitle}</h2>
         </header>
 
