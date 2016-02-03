@@ -26,8 +26,9 @@ NewChat = React.createClass({
   },
 
   renderUsers() {
+    that = this;
     return this.data.users.map((user) => {
-      if (this.isCurrentUser(user) || this.roomExistsWith(user)) {
+      if (that.isCurrentUser(user) || that.roomExistsWith(user)) {
         //don't return this user
       } else {
         return <UserItem key={user._id} user={user} />;

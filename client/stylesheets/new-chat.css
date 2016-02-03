@@ -18,7 +18,7 @@
   height: 50%;
 }
 
- .user-item {
+.new-chat:hover .user-item {
   display: list-item;
 }
 
