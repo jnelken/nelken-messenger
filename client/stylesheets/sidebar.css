@@ -9,6 +9,7 @@
 }
 .login * {
   width: inherit;
+  font-size: inherit;
 }
 .login-container {
   margin: 1em 1em 0 1em;
