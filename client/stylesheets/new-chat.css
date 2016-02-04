@@ -3,31 +3,25 @@
   background: linear-gradient(#999999, #000000);
   border-radius: 5px;
   height: 2.1em;
-  width: 10em;
+  width: 23vw;
   margin: auto;
-  overflow: auto;
-
+  overflow: scroll;
   position: fixed;
   left: 1em;
   bottom: 1em;
-
   transition: height 400ms;
 }
-
 .new-chat:hover {
-  height: 50%;
+  height: 30%;
 }
-
-.new-chat:hover .user-item {
-  display: list-item;
-}
-
 .user-item {
   display: none;
   padding: .5em;
   cursor: pointer;
 }
-
+.new-chat:hover .user-item {
+  display: list-item;
+}
 .chat-start-text {
   font-weight: bold;
   text-align: center;
@@ -39,6 +33,6 @@
 }
 @media screen and (max-width: 580px) {
   .new-chat {
-      width: 20vw;
+    width: 20vw;
   }
 }

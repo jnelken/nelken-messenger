@@ -12,9 +12,9 @@ header {
 }
 header img {
   width: 5em;
-  margin-left: 57px;
+  margin-left: 3.5em;
 }
-.current-room-title {
+h2 {
   background: #FEF5E5;
   color: #FCD598;
   margin-right: 1em;
@@ -23,17 +23,13 @@ header img {
   font-weight: lighter;
   font-size: 1.5em;
 }
-h1 {
-  font-weight: bolder;
-  font-size: 1.5em;
-  padding: 1em;
-  height: 1.5em;
-  width: 200px;
-}
-.flex-main {
+article {
   position: fixed;
   bottom: 0px;
   top: 7em;
+  right: 0px;
+  margin-bottom: 4em;
+  display: flex;
 }
 footer {
   background: linear-gradient(#999999, #000000);
@@ -46,8 +42,5 @@ footer {
 @media screen and (max-width: 580px) {
   body {
       font-size: .7em;
-  }
-  footer {
-    height: 4em;
   }
 }

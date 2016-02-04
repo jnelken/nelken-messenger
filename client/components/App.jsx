@@ -17,13 +17,13 @@ App = React.createClass({
 
         <header>
           <img src="images/nelken_logo.png" />
-          <h2 className="current-room-title"># {this.data.roomTitle}</h2>
+          <h2>{this.data.roomTitle}</h2>
         </header>
 
-        <div className="flex-main">
+        <article className="content">
             <Sidebar />
             <MessageHistory />
-        </div>
+        </article>
 
         <footer>
           <NewChat />

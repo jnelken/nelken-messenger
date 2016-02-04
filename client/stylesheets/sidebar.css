@@ -1,33 +1,22 @@
-.flex-main {
-  display: flex;
-  justify-content: flex-start;
-}
 .sidebar {
   background: #FEF5E5;
-  width: 12em;
-
-  padding-bottom: 4em;
+  width: 25vw;
   overflow: scroll;
 }
-
 .login {
   font-size: 1.2em;
   font-weight: bold;
   position: absolute;
 }
-
 .login-container {
   margin: 1em 1em 0 1em;
   height: 1.5em;
 }
-
 .room-index {
   border-top: 1px solid #ccc;
   border-style: dotted;
-  min-width: 10em;
   margin: 1em;
 }
-
 .room-index li p {
   border-radius: 5px;
   padding: .2em;
@@ -38,26 +27,14 @@
   cursor: pointer;
   font-style: italic;
 }
-
 .room-item::before {
   content: "# "
 }
-
 .current-room {
   font-style: italic;
   background: #555555;
   color: #fff;
 }
-
 .current-room::before {
   content: "➜ "
-}
-
-@media screen and (max-width: 580px) {
-  .sidebar {
-      width: 25vw;
-  }
-  .room-index {
-      min-width: 6em;
-  }
 }

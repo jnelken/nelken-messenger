@@ -9,7 +9,7 @@ MessageHistory = React.createClass({
   getMeteorData() {
     var currentRoomId = Session.get("currentRoomId");
     return {
-      messages: Messages.find({roomId : currentRoomId }).fetch()
+      messages: Messages.find({ roomId : currentRoomId }).fetch()
     };
   },
 

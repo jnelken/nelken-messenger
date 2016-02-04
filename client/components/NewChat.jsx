@@ -8,13 +8,22 @@ NewChat = React.createClass({
     };
   },
 
+  renderUsers() {
+    that = this;
+    return this.data.users.map((user) => {
+      if (that.isCurrentUser(user) || that.roomExistsWith(user)) {
+        // don't return this user
+      } else {
+        return <UserItem key={user._id} user={user} />;
+      }
+    });
+  },
+
   roomExistsWith(user) {
-    //can refactor & also reuse in other componenets
     var roomExists = false;
-    var usernames = this.data.rooms.forEach((room) => {
+    this.data.rooms.forEach((room) => {
       if (room.title[0].username === user.username ||
         room.title[1].username === user.username) {
-
         roomExists = true;
       }
     });
@@ -25,17 +34,6 @@ NewChat = React.createClass({
     return user._id === Meteor.user()._id;
   },
 
-  renderUsers() {
-    that = this;
-    return this.data.users.map((user) => {
-      if (that.isCurrentUser(user) || that.roomExistsWith(user)) {
-        //don't return this user
-      } else {
-        return <UserItem key={user._id} user={user} />;
-      }
-    });
-  },
-
   render() {
     return (
       <ul className="new-chat">
@@ -44,5 +42,4 @@ NewChat = React.createClass({
       </ul>
     );
   }
-
 });

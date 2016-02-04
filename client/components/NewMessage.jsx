@@ -12,7 +12,7 @@ NewMessage = React.createClass({
 
   handleSubmit(e) {
     e.preventDefault();
-    let text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
+    var text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
     Messages.insert({
       username: Meteor.user().username,
       text: text,

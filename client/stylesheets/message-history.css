@@ -1,24 +1,17 @@
 .message-history {
   overflow: scroll;
-  position: fixed;
-  bottom: 4em;
-  top: 7em;
-  left: 12em;
-  right: 0;
-  padding-left: 2em;
+  width: 72vw;
+  padding-left: 3vw;
 }
-
 .top-msg-spacer, .bottom-msg-spacer {
   height: 1em;
 }
-
 .message-timestamp {
-  position: absolute;
-  right: 2em;
   font-size: 1em;
   color: #ccc;
+  float: right;
+  margin-right: 2.5em;
 }
-
 li .username {
   color: #000;
   font-weight: bold;
@@ -26,9 +19,4 @@ li .username {
 li .text-body {
   color: #555;
   padding: .5em 3em 1em 1em;
-}
-@media screen and (max-width: 580px) {
-  .message-history {
-      left: 22.5vw;
-  }
 }

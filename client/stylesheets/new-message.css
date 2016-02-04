@@ -1,18 +1,12 @@
 .new-message {
   margin: 1em 3em 1em 0;
   position: fixed;
-  left: 14em;
+  left: 27vw;
   right: 1em;
 }
-
 .new-message input {
   width: 100%;
   background: #FEF5E5;
   border-radius: 5px;
   padding: .3em 1em;
-}
-@media screen and (max-width: 580px) {
-  .new-message {
-      left: 27vw;
-  }
 }
