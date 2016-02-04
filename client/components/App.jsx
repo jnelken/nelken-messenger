@@ -20,7 +20,7 @@ App = React.createClass({
           <h2>{this.data.roomTitle}</h2>
         </header>
 
-        <article className="content">
+        <article>
             <Sidebar />
             <MessageHistory />
         </article>
